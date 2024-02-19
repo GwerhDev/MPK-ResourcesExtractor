@@ -2,31 +2,14 @@ import PySimpleGUI as sg
 import glob
 import os
 import subprocess
-from functions.unpack import *
+from src.functions.unpack import *
+from src.functions.file import *
 
-def select_file():
-    layout = [
-        [sg.Text("Select MPKINFO file:")],
-        [sg.Input(key="-FILE-"), sg.FileBrowse()],
-        [sg.Button("Extract"), sg.Button("Cancel")]
-    ]
-
-    window = sg.Window("MPK Extractor", layout)
-
-    while True:
-        event, values = window.read()
-        if event == sg.WINDOW_CLOSED or event == "Cancel":
-            window.close()
-            return None
-        elif event == "Extract":
-            return values["-FILE-"]
-
-if __name__ == "__main__":
+def main():
     mpkinfo_file = select_file()
     if mpkinfo_file:
         basename = ""
         resource_files = []
-        resource_info = mpkinfo_file
 
         if(mpkinfo_file.lower().endswith(".mpkinfo")):
             # fix mismatching file names for Resource*.mpk
@@ -45,3 +28,6 @@ if __name__ == "__main__":
             subprocess.Popen(['explorer', os.path.abspath("results")])  # Opens "results" folder once finished
         else:
             sg.popup_error("Please select a valid MPKINFO file.")
+
+if __name__ == "__main__":
+    main()
