@@ -1,7 +1,8 @@
 import PySimpleGUI as sg
 import glob
 import os
-from functions import *
+import subprocess
+from functions.functions import *
 
 def select_file():
     layout = [
@@ -40,5 +41,7 @@ if __name__ == "__main__":
 
             unpack_archive(mpkinfo_file, resource_files)  # Extract directly after file selection
 
+            sg.popup("Extracción exitosa", title="Success")
+            subprocess.Popen(['explorer', os.path.abspath("results")])  # Abre la carpeta "results" al finalizar
         else:
             sg.popup_error("Please select a valid MPKINFO file.")
