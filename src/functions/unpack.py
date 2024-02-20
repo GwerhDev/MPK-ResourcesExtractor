@@ -1,7 +1,7 @@
 from src.functions.progressbar import show_progress_bar
 from src.functions.extract import extract_file
 
-def unpack_archive(mpkinfo_name, resource_files):
+def unpack_archive(mpkinfo_name, output_dir, resource_files):
     progress_window, progress_bar = show_progress_bar()
     
     file = open(mpkinfo_name, "rb")
@@ -21,7 +21,7 @@ def unpack_archive(mpkinfo_name, resource_files):
             mpk_name = resource_files[min(pak_index, len(resource_files) - 1)]
         
         if file_length > 0:
-            extract_file(name, file_offset, file_length, mpk_name)
+            extract_file(name, file_offset, file_length, mpk_name, output_dir)
             progress_bar.update((x + 1) * 100 / num_files)
     
     progress_window.close()
