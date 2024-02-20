@@ -48,7 +48,7 @@ def interface():
       else:
         unpack_archive(mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
 
-      sg.popup("Successful extraction", title="Success")
+      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0')
 
       # Opens "results" folder once finished
       subprocess.Popen(['explorer', os.path.abspath(mpkinfo_file["folder"] + "/results")])

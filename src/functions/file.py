@@ -14,7 +14,7 @@ def select_file(window):
         ".png" if values['-PNG-'] else "",
         ".gif" if values['-GIF-'] else "",
         ".mp3" if values['-MP3-'] else "",
-        ".mp4" if values['-MP4-'] else ""
+        ".mp4" if values['-MP4-'] else "",
       ]
       
       # Filter empty format
