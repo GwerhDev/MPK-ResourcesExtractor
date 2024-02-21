@@ -1,4 +1,4 @@
-# ExtractorResourcesMPK
+# MKP Resources Extractor
 
 This project is based on this [repository](https://github.com/mindphluxnet/MPKExtractor) by [mindphluxnet](https://github.com/mindphluxnet)
 
