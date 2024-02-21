@@ -10,4 +10,6 @@ This software extracts the .mpkinfo files and saves them in the "results" direct
 
 You can run directly from your IDLE or console using:
 
-´´ pyinstaller --onfile main.py ´´
+``` 
+pyinstaller --onfile main.py 
+```
