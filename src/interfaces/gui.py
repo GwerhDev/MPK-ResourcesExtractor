@@ -23,7 +23,7 @@ def interface():
     no_titlebar=False, 
     grab_anywhere=True,
     background_color='#15171E',
-    icon='src/assets/logo.ico',
+    icon='../src/assets/logo.ico',
   )
   
   mpkinfo_file = select_file(window)
@@ -48,9 +48,9 @@ def interface():
       else:
         unpack_archive(mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
 
-      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
+      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='../src/assets/logo.ico')
 
       # Opens "results" folder once finished
       subprocess.Popen(['explorer', os.path.abspath(mpkinfo_file["folder"] + "/MPL Resources Extractor")])
     else:
-      sg.popup_error("Please select a valid MPKINFO file.", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
+      sg.popup_error("Please select a valid MPKINFO file.", background_color="#15171E", button_color='#0074e0', icon='../src/assets/logo.ico')
