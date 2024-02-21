@@ -12,7 +12,7 @@ def show_progress_bar():
         finalize=True, 
         disable_close=True, 
         background_color='#15171E',
-        icon='src/assets/logo.ico',
+        icon='../assets/logo.ico',
     )
     progress_bar = window[0]
     return window, progress_bar
