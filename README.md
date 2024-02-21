@@ -4,13 +4,13 @@ This project is based on this [repository](https://github.com/mindphluxnet/MPKEx
 
 Requires Python 3.8.x
 
-This software extracts the .mpkinfo files and saves them in the "results" directory, which opens upon completion.
+This software extracts the .mpkinfo files and saves them in the "MPK Resources Extractor" directory, which opens upon completion.
 
 ## Use
 
-You can run directly from your IDLE or console using:
+You can run it directly from your IDLE or console using:
 
-``` 
+```bash
 pyinstaller --onefile main.py 
 ```
 
