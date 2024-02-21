@@ -13,7 +13,7 @@ This software extracts the .mpkinfo files and saves them in the "MPK Resources E
 You can run it directly from your IDE or build it using the console with:
 
 ```bash
-pyinstaller --onefile --noconsole --add-data "src;src" main.py
+pyinstaller --onefile --noconsole --icon=src/assets/logo.ico --add-data "src;src" main.py
 ```
 
 ## Dist
