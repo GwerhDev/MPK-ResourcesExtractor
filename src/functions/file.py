@@ -1,4 +1,6 @@
 import PySimpleGUI as sg
+from src.functions.format import select_format
+
 
 def select_file(window):
   while True:
@@ -9,13 +11,7 @@ def select_file(window):
     elif event == "Extract":
       folder = values["-FOLDER-"]
       file = values["-FILE-"]
-      formats = [
-        ".jpg" if values['-JPG-'] else "",
-        ".png" if values['-PNG-'] else "",
-        ".gif" if values['-GIF-'] else "",
-        ".mp3" if values['-MP3-'] else "",
-        ".mp4" if values['-MP4-'] else "",
-      ]
+      formats = select_format(values)
       
       # Filter empty format
       formats = [format for format in formats if format]

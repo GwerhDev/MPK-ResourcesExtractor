@@ -1,7 +1,7 @@
 import os
 
 def extract_file(file_name, file_offset, file_length, mpk_name, output_dir, file_format=None):
-    output_folder = output_dir + "/results"
+    output_folder = output_dir + "/MPL Resources Extractor"
     output_path = os.path.join(output_folder, file_name)
     
     # Verificar si se especificó un formato de archivo

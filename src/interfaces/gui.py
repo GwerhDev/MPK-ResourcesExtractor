@@ -48,9 +48,9 @@ def interface():
       else:
         unpack_archive(mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
 
-      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0')
+      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
 
       # Opens "results" folder once finished
-      subprocess.Popen(['explorer', os.path.abspath(mpkinfo_file["folder"] + "/results")])
+      subprocess.Popen(['explorer', os.path.abspath(mpkinfo_file["folder"] + "/MPL Resources Extractor")])
     else:
-      sg.popup_error("Please select a valid MPKINFO file.")
+      sg.popup_error("Please select a valid MPKINFO file.", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
