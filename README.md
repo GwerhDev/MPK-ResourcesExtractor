@@ -8,7 +8,7 @@ This software extracts the .mpkinfo files and saves them in the "MPK Resources E
 
 ## Use
 
-You can run it directly from your IDLE or console using:
+You can run it directly from your IDE or console using:
 
 ```bash
 pyinstaller --onefile main.py 
@@ -16,4 +16,4 @@ pyinstaller --onefile main.py
 
 ## Dist
 
-You can download this software for windows [here](https://developers-terminalkiller.fly.dev/gwerh/download/mkpre-installer.exe)
+You can download this software for Windows [here](https://developers-terminalkiller.fly.dev/gwerh/download/mkpre-installer.exe)
