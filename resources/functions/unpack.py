@@ -1,5 +1,5 @@
-from src.functions.progressbar import show_progress_bar
-from src.functions.extract import extract_file
+from resources.functions.progressbar import show_progress_bar
+from resources.functions.extract import extract_file
 
 def unpack_archive(window, mpkinfo_name, output_dir, resource_files, file_format=None):
     progress_bar = show_progress_bar(window)

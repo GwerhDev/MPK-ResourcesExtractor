@@ -1,4 +1,4 @@
-from src.interfaces.gui import interface
+from resources.interfaces.gui import interface
 
 if __name__ == "__main__":
     interface()

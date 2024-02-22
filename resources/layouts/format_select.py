@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from src.utils.lists import file_formats
+from resources.utils.lists import file_formats
 
 layout_format = [
   [sg.Text("Select file formats to extract:", background_color='#15171E')],

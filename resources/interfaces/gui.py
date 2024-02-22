@@ -2,14 +2,14 @@ import PySimpleGUI as sg
 import glob
 import os
 import subprocess
-from src.functions.file import *
-from src.functions.unpack import *
-from src.layouts.logo import layout_logo
-from src.layouts.buttons import layout_buttons
-from src.layouts.file_select import layout_file
-from src.layouts.format_select import layout_format
-from src.layouts.directory_select import layout_dir
-from src.layouts.progressbar import layout_progresbar
+from resources.functions.file import *
+from resources.functions.unpack import *
+from resources.layouts.logo import layout_logo
+from resources.layouts.buttons import layout_buttons
+from resources.layouts.file_select import layout_file
+from resources.layouts.format_select import layout_format
+from resources.layouts.directory_select import layout_dir
+from resources.layouts.progressbar import layout_progresbar
 
 def interface():
   window = sg.Window(
@@ -25,7 +25,7 @@ def interface():
     no_titlebar=False, 
     grab_anywhere=False,
     background_color='#15171E',
-    icon='src/assets/logo.ico',
+    icon='resources/assets/logo.ico',
   )
   
   mpkinfo_file = select_file(window)
@@ -50,9 +50,9 @@ def interface():
       else:
         unpack_archive(window, mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
 
-      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
+      sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='resources/assets/logo.ico')
 
       # Opens "results" folder once finished
       subprocess.Popen(['explorer', os.path.abspath(mpkinfo_file["folder"] + "/MPL Resources Extractor")])
     else:
-      sg.popup_error("Please select a valid MPKINFO file.", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
+      sg.popup_error("Please select a valid MPKINFO file.", background_color="#15171E", button_color='#0074e0', icon='resources/assets/logo.ico')

@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from src.functions.format import select_format
+from resources.functions.format import select_format
 
 
 def select_file(window):
