@@ -9,6 +9,7 @@ from src.layouts.buttons import layout_buttons
 from src.layouts.file_select import layout_file
 from src.layouts.format_select import layout_format
 from src.layouts.directory_select import layout_dir
+from src.layouts.progressbar import layout_progresbar
 
 def interface():
   window = sg.Window(
@@ -18,12 +19,13 @@ def interface():
       layout_file,
       layout_format,
       layout_buttons,
+      layout_progresbar,
     ],
     resizable=False,
     no_titlebar=False, 
-    grab_anywhere=True,
+    grab_anywhere=False,
     background_color='#15171E',
-    icon='../src/assets/logo.ico',
+    icon='src/assets/logo.ico',
   )
   
   mpkinfo_file = select_file(window)
@@ -44,9 +46,9 @@ def interface():
       resource_files.append(basename + ".mpk")
       
       if mpkinfo_file["formats"]:
-        unpack_archive(mpkinfo_file["file"], mpkinfo_file["folder"], resource_files, mpkinfo_file["formats"])
+        unpack_archive(window, mpkinfo_file["file"], mpkinfo_file["folder"], resource_files, mpkinfo_file["formats"])
       else:
-        unpack_archive(mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
+        unpack_archive(window, mpkinfo_file["file"], mpkinfo_file["folder"], resource_files)
 
       sg.popup("Successful extraction", title="Success", background_color="#15171E", button_color='#0074e0', icon='src/assets/logo.ico')
 
