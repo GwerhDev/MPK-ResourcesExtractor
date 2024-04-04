@@ -8,7 +8,7 @@ This project is based on this [repository](https://github.com/mindphluxnet/MPKEx
 
 Requires Python 3.8.x
 
-This software extracts the .mpkinfo files and saves them in the "MPK Resources Extractor" directory, which opens upon completion.
+This software extracts the .mpkinfo files and saves them into the "MPK Resources Extractor" directory, which opens upon completion.
 
 You can run it directly from your IDE or build it using the console with:
 
