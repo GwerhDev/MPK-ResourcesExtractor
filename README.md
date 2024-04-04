@@ -18,4 +18,4 @@ pyinstaller --onefile --noconsole --icon=resources/assets/logo.ico --add-data "r
 
 ## Dist
 
-You can download this software for Windows [here](https://developers-terminalkiller.fly.dev/gwerh/download/mkpre-installer.exe)
+You can download this software for Windows [here](You can download this software for Windows [here](https://www.mediafire.com/file/fnulok211dlyuep/mkpre-installer.exe/file)
